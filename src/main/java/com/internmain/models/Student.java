@@ -2,20 +2,27 @@ package com.internmain.models;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "entity_student")
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//identitiy koyarsam kendisi yüklenir ancak auto  koyarsam elle girmem gerekir
+    @Column(name = "student_id")
     private Long id;
+    @Column(name = "student_name")
+
     private String name;
+    @Column(name = "student_email")
+
     private String email;
+    @Column(name = "student_localDate")
+
     private LocalDate dob;
+    @Column(name = "student_age")
+
     private int age;
 
     public Student() {
