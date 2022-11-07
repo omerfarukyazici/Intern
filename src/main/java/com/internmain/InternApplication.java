@@ -19,19 +19,8 @@ public class InternApplication {
         SpringApplication.run(InternApplication.class, args);
     }
 
-    @GetMapping
-    public List<Student> hello() {
-        return List.of(
-                new Student(
-                        1L,
-                        "Maria",
-                        "mariam@gmail.com",
-                        LocalDate.of(2000, Month.JANUARY, 5),
-                        22
 
-                )
-        );
     }
-}
+
 
 

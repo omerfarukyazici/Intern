@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.internmain.models.Student;
+import com.internmain.repository.StudentRepository;
 import com.internmain.service.StudentService;
 import org.springframework.web.bind.annotation.*;
 

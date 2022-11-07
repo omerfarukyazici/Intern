@@ -1,9 +1,7 @@
 package com.internmain.models;
 
-import lombok.Data;
-
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Table(name = "entity_student")
@@ -12,16 +10,16 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)//identitiy koyarsam kendisi yüklenir ancak auto  koyarsam elle girmem gerekir
     @Column(name = "student_id")
     private Long id;
-    @Column(name = "student_name")
+    @Column(name = "name")
 
     private String name;
-    @Column(name = "student_email")
+    @Column(name = "email")
 
     private String email;
-    @Column(name = "student_localDate")
+    @Column(name = "localDate")
 
-    private LocalDate dob;
-    @Column(name = "student_age")
+    private Date dob;
+    @Column(name = "age")
 
     private int age;
 
@@ -29,7 +27,7 @@ public class Student {
 
     }
 
-    public Student(Long id, String name, String email, LocalDate dob, int age) {
+    public Student(Long id, String name, String email, Date dob, int age) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -37,7 +35,7 @@ public class Student {
         this.age = age;
     }
 
-    public Student(String name, String email, LocalDate dob, int age) {
+    public Student(String name, String email, Date dob, int age) {
         this.name = name;
         this.email = email;
         this.dob = dob;
@@ -68,11 +66,11 @@ public class Student {
         this.email = email;
     }
 
-    public LocalDate getDob() {
+    public Date getDob() {
         return dob;
     }
 
-    public void setDob(LocalDate dob) {
+    public void setDob(Date dob) {
         this.dob = dob;
     }
 
